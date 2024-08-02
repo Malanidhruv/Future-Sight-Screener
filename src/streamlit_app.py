@@ -372,8 +372,8 @@ with tab_config:
   ac.markdown('### 🔧 Screening Configuration')
   bc.download_button(
     label="Export Configuration",
-    data=Path('screenipy.ini').read_text(),
-    file_name='screenipy.ini',
+    data=Path('futuresight.ini').read_text(),
+    file_name='futuresight.ini',
     mime='text/plain',
     type='primary',
     use_container_width=True
@@ -409,11 +409,11 @@ with tab_config:
   save_button = st.button('Save Configuration', on_click=on_config_change, type='primary', use_container_width=True)
   
   st.markdown('### Import Your Own Configuration:')
-  uploaded_file = st.file_uploader('Upload screenipy.ini file')
+  uploaded_file = st.file_uploader('Upload futuresight.ini file')
 
   if uploaded_file is not None:      
     bytes_data = uploaded_file.getvalue()
-    with open('screenipy.ini', 'wb') as f: 
+    with open('futuresight.ini', 'wb') as f: 
       f.write(bytes_data)
     st.toast('Configuration Imported', icon='⚙️')
 
