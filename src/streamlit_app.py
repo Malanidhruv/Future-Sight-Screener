@@ -60,7 +60,7 @@ def show_df_as_result_table():
     bc.download_button(
         label="Download Results",
         data=df.to_csv().encode('utf-8'),
-        file_name=f'screenipy_results_{datetime.datetime.now().strftime("%H:%M:%S_%d-%m-%Y")}.csv',
+        file_name=f'future sight_results_{datetime.datetime.now().strftime("%H:%M:%S_%d-%m-%Y")}.csv',
         mime='text/csv',
         type='secondary',
         use_container_width=True
